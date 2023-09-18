@@ -28,7 +28,7 @@ for code in current_price_codes:
     html = response.text
     soup = BeautifulSoup(html, 'html.parser') #html 을 html.parser 로 번역한다
     price = soup.select_one(".wrap_company h2 a").text #태그 정보 하나만 가져올꺼면 select_one(), 여러개는 select(), "css선택자" 를 인자로 받음, .text 로 태그 안에 있는 문자열만 가져옴
-    price = price.replace(',', '') #'97,700' 문자열을 숫자로 사용하기 위해 ',' 를 지워준다
+    price = price.replace(',', '')
     # print(price)
 
     #데이터를 저장할 열을 알고 있을 때
